@@ -104,6 +104,19 @@ def cmd_residue(stack):
         return
     raise TypeError("RESIDUE: unsupported types")
 
+def cmd_mirror(stack):
+    a = stack.pop()
+    b = stack.pop()
+    if isinstance(a, int) and isinstance(b, int):
+        stack.append(a == b)
+        return
+    if isinstance(a, str) and isinstance(b, str):
+        stack.append(a == b)
+        return
+    raise TypeError("MIRROR: unsupported types (must be two ints or two strings)")
+
+
+
 
 
 
@@ -120,32 +133,8 @@ def cmd_invert(stack):
     stack.append(s[::-1])        
     # sequence[start : stop : step] (slicing syntax) moving in step backwards by starting at the end to the beginning
 
-def cmd_stipple(stack):
-    count = stack.pop()
-    char = stack.pop()
-   # Validation
-    try:
-        count = int(count)
-    except (ValueError, TypeError):
-        raise TypeError(f"STIPPLE expected a number for count, got: {count}")
-    if not isinstance(char, str):
-        raise TypeError(f"STIPPLE expected a string for char, got: {type(char).__name__}")
-    stack.append(char * int(count))
 
 
-
-
-
-
-
-
-def cmd_steady_hand(stack):
-    n = int(stack.pop())
-    stack.append(n % 2 ==0)
-
-def cmd_mirror(stack):
-    s = stack.pop()
-    stack.append(s == s[::-1])
 
 
 
@@ -170,9 +159,9 @@ def execute_program(lines, stack):
         "RESIDUE": cmd_residue,
         "MERGE": cmd_merge,
         "INVERT": cmd_invert,
-        "STIPPLE": cmd_stipple,
-        "STEADYHAND": cmd_steady_hand,
         "MIRROR": cmd_mirror,
+        "==": cmd_mirror,
+
     }
     for rawLine in lines:
         parsed = parseLine(rawLine)

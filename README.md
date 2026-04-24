@@ -4,14 +4,24 @@ Each command represents a creative action that manipulates data on a stack to cr
 
 ## How to run programs
 ------
-python interpreter.py programs/helloworld.txt
+```
+python interpreter.py
+programs/helloworld.txt
 python interpreter.py programs/cat.txt
 python interpreter.py programs/isItEven.txt
 python interpreter.py programs/multiply.txt
 python interpreter.py programs/repeater.txt
 python interpreter.py programs/reverseString.txt
 python interpreter.py programs/isItPalindrome.txt
+```
+# Allows commenting 
+Lines beginning with # are treated as comments and ignored by the interpreter.
 
+# Allows " " or ''
+`PAINT "Hello, world!"`
+
+
+# Esoteric ART Language 
 
 1. Clone the project into your own directory or folder workspace.
 ```
@@ -48,7 +58,6 @@ SHOWOFF - prints top stack slot.
 'Residue' or '%' - Does modulo on two numbers.
 MERGE - converts to strings and joins the two and returns a string
 INVERT - reverses a string and returns it.
-STIPPLE - Repeats a character or string however many times you allow (takes string and int counter). Amount first then string/char
 STEADYHAND - Checks if number is even, returns true or false.
-MIRROR - Checks if the string is the same forward and backwards, returns true or false.
+MIRROR - Makes a comparison for two integers or two strings
 ```
