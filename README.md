@@ -48,7 +48,7 @@ SHOWOFF - prints top stack slot.
 'Residue' or '%' - Does modulo on two numbers.
 MERGE - converts to strings and joins the two and returns a string
 INVERT - reverses a string and returns it.
-STIPPLE - Repeats a character or string however many times you allow (takes string and int counter).
+STIPPLE - Repeats a character or string however many times you allow (takes string and int counter). Amount first then string/char
 STEADYHAND - Checks if number is even, returns true or false.
 MIRROR - Checks if the string is the same forward and backwards, returns true or false.
 ```
