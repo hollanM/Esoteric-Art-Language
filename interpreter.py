@@ -98,7 +98,7 @@ def cmd_stipple(stack):
 
 
 
-#Logic You can choose to print booleans as True/False or convert them to "yes"/"no" in your programs.
+
 def cmd_steady_hand(stack):
     n = int(stack.pop())
     stack.append(n % 2 ==0)

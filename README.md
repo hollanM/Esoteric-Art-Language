@@ -13,14 +13,14 @@ python interpreter.py programs/reverseString.txt
 python interpreter.py programs/isItPalindrome.txt
 
 
-1. Clone the project into your own directory or folder.
+1. Clone the project into your own directory or folder workspace.
 ```
-git clone https://github.com/OC-ComputerScience/tutorial-frontend-vue3-simple.git
+https://github.com/hollanM/Esoteric-Art-Language.git
 ```
 
 2. Install the python if you havent.
 ```
-winget install Python.Python.3
+winget install Python.Python.3   or    go to microsoftstore and install : Download Python 3.12.x
 restart vs code if needed.
 now you should be able to run the programs with the python interpreter.py above.
 ```
@@ -65,3 +65,4 @@ MIX
 BLEND
 RESIDUE
 MERGE
+BOOLEANs for isItEven
