@@ -123,6 +123,13 @@ def cmd_invert(stack):
 def cmd_stipple(stack):
     count = stack.pop()
     char = stack.pop()
+   # Validation
+    try:
+        count = int(count)
+    except (ValueError, TypeError):
+        raise TypeError(f"STIPPLE expected a number for count, got: {count}")
+    if not isinstance(char, str):
+        raise TypeError(f"STIPPLE expected a string for char, got: {type(char).__name__}")
     stack.append(char * int(count))
 
 
