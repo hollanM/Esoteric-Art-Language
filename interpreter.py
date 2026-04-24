@@ -195,7 +195,7 @@ def main():
         return
 
     program_path = sys.argv[1]
-    with open (program_path, "reader", encoding = "utf-8") as file:
+    with open (program_path, "r", encoding = "utf-8") as file:
         lines = file.readlines()
 
     stack = []
