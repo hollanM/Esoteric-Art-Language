@@ -1,2 +1,11 @@
 SKETCH
 SHOWOFF
+
+PAINT "Lets combine two strings now:"
+SHOWOFF
+
+
+SKETCH
+SKETCH
+BLEND
+SHOWOFF

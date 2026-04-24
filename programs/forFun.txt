@@ -1,5 +1,57 @@
-PAINT "art"
+PAINT "hazah"
 TRACE
 MERGE
 INVERT
+SHOWOFF
+
+PAINT "sky"
+PAINT 3
+SHOWOFF
+SHOWOFF
+
+
+#alphaalpha
+PAINT "alpha "
+TRACE
+PAINT "beta"
+ERASE
+BLEND
+SHOWOFF
+
+
+
+#tap
+PAINT "tap"
+PAINT 10
+PAINT 3
+RESIDUE
+STIPPLE
+SHOWOFF
+
+
+#12
+PAINT 3
+BRUSHWEIGHT 4
+MIX
+SHOWOFF
+
+
+
+
+#the girlleft
+PAINT "lrig eht"
+PAINT "tfel "
+FLIP
+MERGE
+INVERT
+SHOWOFF
+
+
+
+#6Brushes
+PAINT 2
+PAINT 3
+MIX
+PAINT " Brushes"
+MERGE
 SHOWOFF

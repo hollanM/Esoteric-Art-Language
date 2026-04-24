@@ -23,8 +23,17 @@ def parse_line(line):
 
 
 #Stack Literals
-def cmd_paint(stack, text):
-    stack.append(text)
+def cmd_paint(stack, value):
+    #value = value.strip()
+    if (value.startswith('"') and value.endswith('"')) or \
+       (value.startswith("'") and value.endswith("'")):
+        stack.append(value[1:-1])
+        return
+    if value.isdigit() or (value.startswith("-") and value[1:].isdigit()):
+        stack.append(int(value))
+        return
+    stack.append(value)
+
 
 def cmd_brush_weight(stack, value):
     stack.append(int(value))
@@ -46,7 +55,10 @@ def cmd_erase(stack):
 #Input/Output
 def cmd_sketch(stack):
     line = input()
-    stack.append(line)
+    if line.isdigit() or (line.startswith("-") and line[1:].isdigit()):
+        stack.append(int(line))
+    else:
+        stack.append(line)
 
 def cmd_showoff(stack):
     value = stack.pop()
@@ -60,17 +72,38 @@ def cmd_showoff(stack):
 def cmd_blend(stack):
     a = stack.pop()
     b = stack.pop()
-    stack.append(b + a)
+    if isinstance(a, str) and isinstance(b, str):
+        stack.append(b + a)
+        return  
+    if isinstance(a, int) and isinstance(b, int):
+        stack.append(b + a)
+        return
+    raise TypeError("BLEND: unsupported types")
+
 
 def cmd_mix(stack):
-    a = int(stack.pop())
-    b = int(stack.pop())
-    stack.append(b * a)
+    a = stack.pop()
+    b = stack.pop()
+    if isinstance(a, int) and isinstance(b, int):
+        stack.append(b * a)
+        return
+    if isinstance(a, int) and isinstance(b, str):
+        stack.append(b * a)
+        return
+    if isinstance(a, str) and isinstance(b, int):
+        stack.append(a * b)
+        return
+    raise TypeError("MIX: unsupported types")
+
 
 def cmd_residue(stack):
     a = stack.pop()
     b = stack.pop()
-    stack.append(b % a)
+    if isinstance(a, int) and isinstance(b, int):
+        stack.append(b % a)
+        return
+    raise TypeError("RESIDUE: unsupported types")
+
 
 
 

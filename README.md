@@ -36,33 +36,19 @@ Not: helloworld              //This only prints the string hello world, not take
 
 5. Keywords and Operations
 ```
-PAINT - pushes string on stack
-BRUSHWEIGHT - pushes int on stack
-TRACE - Duplicates top stack slot
-FLIP - swaps the top two stack slots
-ERASE - removes the top stack slot
-SKETCH - takes input and pushes it on stack
-SHOWOFF - prints top stack slot
-'BLEND' or '+'' - concatenates two strings
-'MIX' or '*' - Multiplies two numbers
-'Residue' or '%' - Does modulo on two numbers
-MERGE - joins two strings together
-INVERT - reverses a string
-STIPPLE - Repeats a character or string however many times you allow (takes string then int amount)
-STEADYHAND - Checks if number is even
-MIRROR - Checks if the string is the same forward and backwards(returns true/false)
+PAINT - pushes string on stack.
+BRUSHWEIGHT - pushes int on stack.
+TRACE - Duplicates top stack slot.
+FLIP - swaps the top two stack slots.
+ERASE - removes the top stack slot.
+SKETCH - takes user input and pushes it on stack.
+SHOWOFF - prints top stack slot.
+'BLEND' or '+'' - concatenates two strings or adds two integers, same types.
+'MIX' or '*' - Multiplies two numbers or repeats strings a given number of times.
+'Residue' or '%' - Does modulo on two numbers.
+MERGE - converts to strings and joins the two and returns a string
+INVERT - reverses a string and returns it.
+STIPPLE - Repeats a character or string however many times you allow (takes string and int counter).
+STEADYHAND - Checks if number is even, returns true or false.
+MIRROR - Checks if the string is the same forward and backwards, returns true or false.
 ```
-
-
-
-
-
-Expand logic to actually make a palindrome checking program file instead of putting built in function
-
-Mirror
-Repeater
-MIX
-BLEND
-RESIDUE
-MERGE
-BOOLEANs for isItEven
