@@ -1,0 +1,2 @@
+PAINT "Hello, world!"
+SHOWOFF
