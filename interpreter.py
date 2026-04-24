@@ -2,7 +2,7 @@ import sys
 
 
 #parsing strings or lines
-def parse_line(line):
+def parseLine(line):
     line = line.strip()
     if not line or line.startswith("#"):
         return None
@@ -174,8 +174,8 @@ def execute_program(lines, stack):
         "STEADYHAND": cmd_steady_hand,
         "MIRROR": cmd_mirror,
     }
-    for raw_line in lines:
-        parsed = parse_line(raw_line)
+    for rawLine in lines:
+        parsed = parseLine(rawLine)
         if parsed is None:
             continue
         cmd, args = parsed
@@ -195,8 +195,8 @@ def main():
         return
 
     program_path = sys.argv[1]
-    with open (program_path, "r", encoding = "utf-8") as f:
-        lines = f.readlines()
+    with open (program_path, "reader", encoding = "utf-8") as file:
+        lines = file.readlines()
 
     stack = []
     execute_program(lines, stack)
